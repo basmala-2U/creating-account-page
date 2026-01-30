@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../core/constants/app_colors.dart';
+import '../core/resources/app_text_styles.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
@@ -19,25 +20,18 @@ class CustomTextField extends StatelessWidget {
     this.isPassword = false,
     this.isPasswordVisible,
     this.onToggleVisibility,
-  }) ;
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // الـ Label (العنوان)
         Text(
           label,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-            color: AppColors.blackColor,
-          ),
+          style: AppTextStyles.blackColor16Medium,
         ),
         const SizedBox(height: 8),
-
-        // الـ TextField
         TextField(
           controller: controller,
           keyboardType: keyboardType,
@@ -49,7 +43,7 @@ class CustomTextField extends StatelessWidget {
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle: const TextStyle(
-              color: AppColors.primaryColor, // البنفسجي للـ hint
+              color: AppColors.primaryColor,
               fontSize: 16,
             ),
             filled: true,
@@ -62,7 +56,6 @@ class CustomTextField extends StatelessWidget {
               horizontal: 20,
               vertical: 18,
             ),
-            // أيقونة العين للباسورد
             suffixIcon: isPassword
                 ? IconButton(
               onPressed: onToggleVisibility,

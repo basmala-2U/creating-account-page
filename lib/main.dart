@@ -12,10 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Community App',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
       home: const CreateAccountScreen(),
     );
   }

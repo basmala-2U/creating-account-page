@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../core/constants/app_colors.dart';
+import '../core/resources/app_text_styles.dart';
 
 class PasswordRequirementItem extends StatelessWidget {
   final String text;
@@ -9,13 +10,12 @@ class PasswordRequirementItem extends StatelessWidget {
     super.key,
     required this.text,
     required this.isValid,
-  }) ;
+  });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // الدائرة الملونة
         Container(
           width: 20,
           height: 20,
@@ -30,15 +30,11 @@ class PasswordRequirementItem extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 8),
-
-        // النص
         Text(
           text,
-          style: TextStyle(
-            fontSize: 14,
-            color: isValid ? AppColors.greenColor : AppColors.redColor,
-            fontWeight: FontWeight.w500,
-          ),
+          style: isValid
+              ? AppTextStyles.greenColor14Medium
+              : AppTextStyles.redColor14Medium,
         ),
       ],
     );
