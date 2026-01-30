@@ -11,7 +11,7 @@ class CustomTextField extends StatelessWidget {
   final VoidCallback? onToggleVisibility;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.label,
     required this.hintText,
     required this.controller,
@@ -19,7 +19,7 @@ class CustomTextField extends StatelessWidget {
     this.isPassword = false,
     this.isPasswordVisible,
     this.onToggleVisibility,
-  }) : super(key: key);
+  }) ;
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import '../widgets/password_validation.dart';
 import '../widgets/custom_button.dart';
 
 class CreateAccountScreen extends StatefulWidget {
-  const CreateAccountScreen({Key? key}) : super(key: key);
+  const CreateAccountScreen({super.key});
 
   @override
   State<CreateAccountScreen> createState() => _CreateAccountScreenState();
@@ -144,7 +144,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 CustomButton(
                   text: 'Sign Up',
                   onPressed: () {
-                    print('Sign Up pressed');
+                   // TODO: Implement sign up logic;
                   },
                 ),
 
@@ -236,7 +236,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
           ),
           GestureDetector(
             onTap: () {
-              print('Log In pressed');
+              // TODO: navigate to login;
             },
             child: const Text(
               'Log In',
